@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Israel-Palestine News - Modern Design</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    margin: 0; padding: 0; color: #333;
+  }
+  header {
+    background-color: #005f73;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+  #news-ticker {
+    background-color: #0a9396;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  #news-ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 15s linear infinite;
+  }
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  nav {
+    background-color: #0a9396;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+  }
+  .news-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  .news-card:hover {
+    transform: scale(1.03);
+  }
+  .news-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    border-radius: 8px;
+    z-index: 0;
+  }
+  .news-content {
+    position: relative;
+    z-index: 1;
+  }
+  .news-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .news-excerpt {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ddd;
+  }
+  .news-date {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: left;
+  }
+  .share-buttons {
+    margin-top: 10px;
+  }
+  .share-buttons a {
+    margin-left: 10px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  .share-buttons a:hover {
+    opacity: 0.7;
+  }
+  .share-buttons img {
+    width: 24px;
+    height: 24px;
+  }
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 600px) {
+    header {
+      font-size: 1.5rem;
+    }
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>Israel-Palestine News</header>
+<div id="news-ticker">
+  <span>Breaking: New escalation between sides | UN calls for ceasefire | Exclusive reports from the region</span>
+</div>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Breaking News</a>
+  <a href="#">Reports</a>
+  <a href="#">Analysis</a>
+  <a href="#">Contact Us</a>
+</nav>
+<div class="container">
+  <div class="news-grid">
+    <article class="news-card" style="background-image: url('https://via.placeholder.com/400x250?text=News+1');">
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <h2 class="news-title">New Developments in the Israel-Palestine Conflict</h2>
+        <p class="news-excerpt">The past few hours have seen a military escalation in multiple areas amid international calls for a ceasefire.</p>
+        <div class="share-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/news1.html" target="_blank" rel="noopener" title="Share on Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/24/124/124010.png" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/news1.html&text=New Developments in the Israel-Palestine Conflict" target="_blank" rel="noopener" title="Share on Twitter">
+            <img src="https://cdn-icons-png.flaticon.com/24/124/124021.png" alt="Twitter" />
+          </a>
+        </div>
+        <time class="news-date" datetime="2025-08-08">August 8, 2025</time>
+      </div>
+    </article>
+
+    <article class="news-card" style="background-image: url('https://via.placeholder.com/400x250?text=News+2');">
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <h2 class="news-title">International Community Calls for Peaceful Resolution</h2>
+        <p class="news-excerpt">The United Nations issued a statement urging all parties to adhere to the truce and respect the rights of civilians.</p>
+        <div class="share-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/news2.html" target="_blank" rel="noopener" title="Share on Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/24/124/124010.png" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/news2.html&text=International Community Calls for Peaceful Resolution" target="_blank" rel="noopener" title="Share on Twitter">
+            <img src="https://cdn-icons-png.flaticon.com/24/124/124021.png" alt="Twitter" />
+          </a>
+        </div>
+        <time class="news-date" datetime="2025-08-07">August 7, 2025</time>
+      </div>
+    </article>
+
+    <article class="news-card" style="background-image: url('https://via.placeholder.com/400x250?text=News+3');">
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <h2 class="news-title">Analysis: Impact of the Conflict on the Region and the World</h2>
+        <p class="news-excerpt">Experts review the possible economic and political effects of the conflict on the Middle East and globally.</p>
+        <div class="share-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/news3.html" target="_blank" rel="noopener" title="Share on Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/24/124/124010.png" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/news3.html&text=Analysis: Impact of the Conflict on the Region and the World" target="_blank" rel="noopener" title="Share on Twitter">
+            <img src="https://cdn-icons-png.flaticon.com/24/124/124021.png" alt="Twitter" />
+          </a>
+        </div>
+        <time class="news-date" datetime="2025-08-06">August 6, 2025</time>
+      </div>
+    </article>
+  </div>
+</div>
+<footer>© 2025 All rights reserved</footer>
+</body>
+</html>
